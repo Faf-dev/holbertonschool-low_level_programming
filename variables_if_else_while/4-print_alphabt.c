@@ -13,11 +13,13 @@ int main(void)
 	int lign = '\n';
 
 	for (lettre = 'a'; lettre <= 'z'; lettre++)
+	{
 		if (lettre == 'q' || lettre == 'e')
 		{
 			continue;
 		}
 	putchar(lettre);
+}
 		putchar(lign);
 	return (0);
 }
