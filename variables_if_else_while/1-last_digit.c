@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * main: jsp
+ * main - jsp
  * Return: return 0
  **/
 int main(void)
