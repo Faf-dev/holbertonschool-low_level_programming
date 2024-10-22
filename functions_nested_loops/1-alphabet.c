@@ -9,10 +9,12 @@
  * return: return 0
  */
 void print_alphabet(void)
-
 {
-	int alpha;
+	char c;
 
-	for (alpha = 'a'; alpha < 'z'; alpha++)
-		return (&c);
+	for ( c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
 }
