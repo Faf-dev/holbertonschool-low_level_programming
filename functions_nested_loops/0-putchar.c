@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 /**
  * main - Entry point
  * Return: return 0
  */
 int main(void)
 {
-	printf("_putchar\n");
-	return (0);
+	char *c="_putchar\n";
+	while (*c) putchar(*c++);
+	return(0);
 }

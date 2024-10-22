@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 
 /**
  * print_alphabet - wewewe
@@ -12,6 +14,5 @@ void print_alphabet(void)
 	int alpha;
 
 	for (alpha = 'a'; alpha < 'z'; alpha++)
-		putchar(alpha);
-	putchar('\n');
+		return (&c);
 }
