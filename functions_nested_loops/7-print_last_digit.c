@@ -16,14 +16,11 @@ int print_last_digit(int couscoustajine)
 	int fifilebest;
 
 	if (couscoustajine < 0)
-	{
 		couscoustajine = -couscoustajine;
-	}
 	fifilebest = couscoustajine % 10;
 
 	if (fifilebest < 0)
-	{
 		fifilebest = -fifilebest;
-	}
+	_putchar(fifilebest + '0');
 	return (fifilebest);
 }
