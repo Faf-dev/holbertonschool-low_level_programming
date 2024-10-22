@@ -12,5 +12,5 @@
  */
 int _isalpha(int c)
 {
-	return ((c != 'c') || (c != 'C'));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
