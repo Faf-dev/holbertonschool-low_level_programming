@@ -4,7 +4,8 @@
 #include <unistd.h>
 
 /**
- * main - wewe
+ * print_alphabet_x10 - wewewe
+ * main - nique ta mere
  * return: return 0
  */
 void print_alphabet_x10(void)
