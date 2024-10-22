@@ -4,7 +4,8 @@
  *main - sert a r
  *Return: return 0
  */
-int main(void)
+int coucou(void)
 {
-	int chiffre(int a, int b);
+	printf("niquezebi\n");
+	return (0);
 }
