@@ -1,14 +1,16 @@
 #include "main.h"
 
 /**
- * return: always 0
+ * print_diagonal - main code
+ *
+ * @n: number
  */
 
 void print_diagonal(int n)
 {
 	int lign = 0;
 	int space;
-	
+
 	if (n <= 0)
 	{
 		_putchar('\n');
