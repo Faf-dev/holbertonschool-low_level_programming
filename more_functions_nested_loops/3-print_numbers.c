@@ -3,7 +3,7 @@
 /**
  * print_numbers - main code
  *
- * @num: number
+ * @num - number
  *
  * Return: return always 0
  */
