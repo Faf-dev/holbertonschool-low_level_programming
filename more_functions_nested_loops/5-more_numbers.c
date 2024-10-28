@@ -11,23 +11,16 @@
 void more_numbers(void)
 {
 	int lign;
-	int num = 0;
+	int num;
 
-	for (num = 0; num <= 14; num++)
+	for (lign = 0; lign < 10; lign++)
 	{
-		if (num > 9)
+		for (num = 0; num <= 14; num++)
 		{
-			_putchar((num) / 10 + '0');
-                _putchar((num) % 10 + '0');
+			if (num > 9)
+				_putchar(num / 10 + '0');
+			_putchar(num % 10 + '0');
 		}
-		else
-		{
-			continue;
-		}
-	while (lign < 10)
-	{
 		_putchar('\n');
-		lign++;
 	}
-}
 }
