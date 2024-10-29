@@ -4,12 +4,11 @@
 #include <math.h>
 
 /**
- * main - main code
- *
- * return: always 0
+ * main- main code
+ * Return: always 0
  */
 
-int main (void)
+int main(void)
 {
 	int chiffre;
 
