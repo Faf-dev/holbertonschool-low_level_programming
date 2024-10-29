@@ -7,7 +7,9 @@
  *
  * _putchar - ouais ca print quoi
  *
- * @*n: pointeur
+ * @*n : pointeur
+ *
+ * @n : valeur du pointeur
  */
 
 void reset_to_98(int *n)
