@@ -8,8 +8,9 @@
 
 void print_diagonal(int n)
 {
-	int lign = 0;
-	int space;
+	int hashtage
+	int ligne = 0;
+	int espace;
 
 	if (n <= 0)
 	{
@@ -25,5 +26,4 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 		lign++;
-}
 }
