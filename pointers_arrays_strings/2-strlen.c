@@ -7,6 +7,8 @@
  *
  * @s : pointer to the string
  *
+ * @len - calcule la longueur
+ *
  * Return: always 0
  */
 
@@ -19,5 +21,5 @@ int _strlen(char *s)
 		len++;
 		s++;
 	}
-	return len;
+	return (len);
 }
