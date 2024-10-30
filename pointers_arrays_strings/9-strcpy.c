@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+ * _strcpy - main
+ *
+ * @dest : the pointer who recive the value of src
+ *
+ * @src : the pointer that send the value to dest
+ *
+ * Return: return the value of dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	dest = src;
+	return (dest);
+}
