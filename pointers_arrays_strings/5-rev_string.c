@@ -9,22 +9,17 @@
  * @s : pointeur du string
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int longueur = 0;
-	char *valeur_s_origine = s;
 	int reverse;
 
 	while (*s != '\0')
 	{
-		_putchar(s);
 		longueur++;
-		s++;
 	}
-	_putchar('\n');
 	for (reverse = longueur - 1; reverse >= 0; reverse--)
 	{
-		_putchar(reverse[valeur_s_origine]);
+
 	}
-	_putchar('\n');
 }
