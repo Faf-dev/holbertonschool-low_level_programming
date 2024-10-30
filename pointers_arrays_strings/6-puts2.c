@@ -5,6 +5,7 @@
 /**
  * puts2 - main code
  *
+ * @str : variable of string
  */
 void puts2(char *str)
 {
