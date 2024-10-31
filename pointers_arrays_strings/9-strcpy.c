@@ -8,6 +8,8 @@
  *
  * @src : the pointer that send the value to dest
  *
+ * @cpydest : copy of dest temporatly
+ *
  * Return: return the value of dest
  */
 

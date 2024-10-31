@@ -4,7 +4,11 @@
 #include "_putchar.c"
 
 /**
- * _atoi - main code 
+ * _atoi - main code
+ *
+ * @s : pointeur vers nb
+ *
+ * Return: always 0 
  */
 
 int _atoi(char *s)
@@ -14,7 +18,9 @@ int _atoi(char *s)
 
 	while (s[longueur])
 		longueur++;
-	for (search = longueur - 1; search < longueur; longueur++)
-
+	for (search = longueur - 1; search < longueur; search++)
+	{
+		_putchar(s[search]);
+	}
 	return (0);
 }
