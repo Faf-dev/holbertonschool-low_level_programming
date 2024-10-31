@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * print_rev - main code
+ * rev_string - main code
  *
  * @s : pointeur du string
  */
@@ -25,3 +25,4 @@ void rev_string(char *s)
 		s[scd_half] = temporaire;
 		scd_half++;
 	}
+}
