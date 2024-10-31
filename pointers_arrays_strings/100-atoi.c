@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "_putchar.c"
 
 /**
  * _atoi - main code
