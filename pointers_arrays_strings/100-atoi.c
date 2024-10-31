@@ -14,13 +14,10 @@
 int _atoi(char *s)
 {
 	int longueur = 0;
-	int search;
 
 	while (s[longueur])
-		longueur++;
-	for (search = longueur - 1; search < longueur; search++)
 	{
-		_putchar(s[search]);
+		longueur++;
 	}
-	return (0);
+	return (*s);
 }
