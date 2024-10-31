@@ -7,7 +7,7 @@
  *
  * @s : pointeur vers nb
  *
- * Return: always 0 
+ * Return: always 0
  */
 
 int _atoi(char *s)
