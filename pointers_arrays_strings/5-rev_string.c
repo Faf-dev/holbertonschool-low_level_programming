@@ -16,9 +16,11 @@ void rev_string(char *s)
 	int first_half;
 	int scd_half = 0;
 
-	while (*s != '\0')
+	while (s[longueur])
+	{
 		longueur++;
-	for (first_half = longueur - 1; first_half >= longueur; first_half--)
+	}
+	for (first_half = longueur - 1; first_half >= longueur / 2; first_half--)
 	{
 		temporaire = s[first_half];
 		s[first_half] = s[scd_half];
