@@ -1,27 +1,30 @@
 #include "main.h"
 #include <string.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include "2-strlen.c"
 /**
- * _strcpy - main
+ * _strcat - main
  *
  * @dest : the pointer who recive the value of src
  *
  * @src : the pointer that send the value to dest
- *
- * @cpydest : copy of dest temporatly
  *
  * Return: return the value of dest
  */
 
 char *_strcat(char *dest, char *src)
 {
-        char *cpydest = dest;
+	int i_dest = 0;
+	int i = 0;
 
-        while (*src != '\0')
-        {
-                *dest = *src;
-                dest++;
-                src++;
-        }
-        return (cpydest);
+	while (dest[i_dest] != '\0')
+		i_dest++;
+	while (src[i] != '\0')
+	{
+		dest[i_dest + i] = src[i];
+		i++;
+	}
+	dest[i_dest + i] = '\0';
+	return (0);
 }
