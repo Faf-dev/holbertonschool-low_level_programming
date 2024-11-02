@@ -29,7 +29,7 @@ char *cap_string(char *str)
 		{
 			if (str[i] <= 'z' && str[i] >= 'a')
 			{
-				str[i] = str[i] -32;
+				str[i] = str[i] - 32;
 				capture = 0;
 			}
 			else if (str[i] <= '9' && str[i] >= '0')
