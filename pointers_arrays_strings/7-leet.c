@@ -12,19 +12,18 @@
 char *leet(char *str)
 {
 	int i;
+	int i_mtts;
+	char min[] = "aeotl";
+	char maj[] = "AEOTL";
+	char replace[] = "43071";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		while (str[i] == 'a' || str[i] == 'A')
-			str[i] = '4';
-		while (str[i] == 'e' || str[i] == 'E')
-			str[i] = '3';
-		while (str[i] == 'o' || str[i] == 'O')
-			str[i] = '0';
-		while (str[i] == 't' || str[i] == 'T')
-			str[i] = '7';
-		while (str[i] == 'l' || str[i] == 'L')
-			str[i] = '1';
+		for (i_mtts = 0; i_mtts < 5; i_mtts++)
+		{
+		if (str[i] == min[i_mtts] || str[i] == maj[i_mtts])
+			str[i] = replace[i_mtts];
+		}
 	}
 	return (str);
 }
