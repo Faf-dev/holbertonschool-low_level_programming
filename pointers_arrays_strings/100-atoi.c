@@ -5,18 +5,23 @@
 /**
  * _atoi - main code
  *
- * @s : pointeur vers nb
+ * @str : pointeur vers nb
  *
  * Return: always 0
  */
 
-int _atoi(char *s)
+int _atoi(char *str)
 {
-	int longueur = 0;
+	int i;
+	int number = 0;
+	int sign = 1;
 
-	while (s[longueur])
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		longueur++;
+		if (str[i] == '-')
+			sign = -1;
+		if (str[i] >= '0' && str[i] <= '9')
+			number = number * 10 + (str[i] - '0');
 	}
-	return (*s);
+	return (number * sign);
 }
