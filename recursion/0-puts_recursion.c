@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _puts_recursion - check the code
+ * @s : pointeur vers la string a print
  *
- * Return: Always 0.
  */
 void _puts_recursion(char *s)
 {
