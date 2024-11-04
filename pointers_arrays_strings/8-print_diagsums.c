@@ -3,7 +3,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
+ * print_diagsums - check the code
+ * @a : pointer
+ * @size : taille des colonnes
  *
  * Return: Always 0.
  */
