@@ -9,13 +9,14 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int j;
+	int i = 0;
+	int result = 0;
+	int result2 = 0;
 
-	for (j = 0; j < size; j++)
-	{
 	for (i = 0; i < size; i++)
 	{
-		printf("[%d], [%d]\n", a[i][j]);
+		result += a[i * (size + 1)];
+		result2 += a[i * (size - 1 - i)];
 	}
+	printf("%i, %i\n", result, result2);
 }
