@@ -10,8 +10,8 @@
  */
 unsigned int _strspn(char *str, char *accept)
 {
-	int byte = 0;
-	int i;
+	unsigned int byte = 0;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
