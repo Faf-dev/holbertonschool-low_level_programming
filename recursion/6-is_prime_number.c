@@ -3,15 +3,15 @@
 #include "5-sqrt_recursion.c"
 
 /**
- * is_prime_number - cherche si c'est un nombre premier
+ * is_prime_number_helper - fonction helper pour prime_number
  * @n : entier a analyser
- * i : incrÃ©menteur pour testerla divisibilie ©par un chiffre impair
+ * i : incrÃ©menteur pour testerla divisibilie par un chiffre impair
  *
  * Return: 0 si pas premier, 1 si premier
  */
-int is_prime_number(int n)
+int is_prime_number_helper(int n)
 {
-	static int i;
+	int i;
 
 	if (n < 2)
 	{
@@ -34,4 +34,16 @@ int is_prime_number(int n)
 		}
 	}
 	return (1); /* si il passe toutes ces Ãtapes, c'est un nombre premier */
+}
+
+/**
+ * is_prime_number - cherche si c'est un nombre premier
+ * @n : entier a analyser
+ * i : incrÃ©menteur pour testerla divisibilie par un chiffre impair
+ *
+ * Return: appel la fonction helper
+ */
+int is_prime_number(int n)
+{
+	return  (is_prime_number_helper(n));
 }
