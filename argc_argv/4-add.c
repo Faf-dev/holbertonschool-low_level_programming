@@ -37,9 +37,5 @@ int main(int argc, char **argv)
 	}
 		printf("%d\n", addition);
 	}
-	else
-	{
-		printf("0\n"); /* si pas d'entier, print 0 et retour ligne */
-	}
-		return (0);
+	return (0);
 }
