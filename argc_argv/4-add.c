@@ -13,28 +13,20 @@
 
 int main(int argc, char **argv)
 {
-	int i; 
-	unsigned int j;
-	unsigned int addition = 0;
-	char *check;
+	int i;
+	int addition;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			check = argv[i];
-
-			for (j = 0; j < strlen(check); j++) /* parcours check */
-			{
-			if (check[j] < 48 || check[j] > 57) /* verifie si chaque valeur de check est un decimal */
-			{
-				printf("Error\n"); 
-				return (1);
-			}
-			addition += atoi(check); /* converti char en int et additionne chaque valeur */
-			check++; /* incrementation de check pour passer au caractere suivant */
+			addition += atoi(argv[i]);
+			if (*argv[i] < 48 || *argv[i] > 57)
+		{
+			printf("Error\n");
+			return (1);
 		}
-	}
+		}
 		printf("%d\n", addition);
 	}
 	return (0);
