@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 {
 	int i; 
 	unsigned int j;
-	int addition = 0;
+	unsigned int addition = 0;
 	char *check;
 
 	if (argc > 1)
