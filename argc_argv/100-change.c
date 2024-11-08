@@ -8,11 +8,11 @@
  */
 int main(int argc, char **argv)
 {
-	int 25_cents = 0;
-	int 10_cents = 0;
-	int 5_cents = 0;
-	int 2_cents = 0;
-	int 1_cents = 0;
+	int _25_cents = 0;
+	int _10_cents = 0;
+	int _5_cents = 0;
+	int _2_cents = 0;
+	int _1_cents = 0;
 	int total;
 	int monnaie = atoi(argv[1]);
 
@@ -28,30 +28,30 @@ int main(int argc, char **argv)
 	}
 	while (monnaie >= 25)
 	{
-		25_cents++;
+		_25_cents++;
 		monnaie -= 25;
 	}
 	while (monnaie >= 10)
 	{
-		10_cents++;
+		_10_cents++;
 		monnaie -= 10;
 	}
 	while (monnaie >= 5)
 	{
-		5_cents++;
+		_5_cents++;
 		monnaie -= 5;
 	}
 	while (monnaie >= 2)
 	{
-		2_cents++;
+		_2_cents++;
 		monnaie -= 2;
 	}
 	while (monnaie >= 1)
 	{
-		1_cent++;
+		_1_cents++;
 		monnaie -= 1;
 	}
-	total = 25_cents + 10_cents + 5_cents + 2_cents + 1_cent;
+	total = _25_cents + _10_cents + _5_cents + _2_cents + _1_cents;
 	printf("%d\n", total);
 	return (0);
 }
