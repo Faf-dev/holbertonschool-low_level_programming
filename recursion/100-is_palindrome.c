@@ -10,11 +10,13 @@ int is_palindrome(char *s)
 {
 	char *reverse = s;
 
-	while (*s == '\0')
+	if (*s == '\0')
+	{
 		if (*s == *reverse)
 			return (1);
 		else
 			return (0);
+	}
 
 	if (*s != '\0')
 	{
