@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		{ /* free toute la mem. pour l'echec de l'alloc d'une ligne */
 			while (i > 0)
 			{
-			free(grid[i]);
+			free(grid[i - 1]);
 			i--;
 			}
 			free(grid);
@@ -40,22 +40,4 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (grid); /* succes! */
-}
-/**
- * free_grid - libere (normalement) toute la memoire
- * @grid : la grille
- * @height : free toute la ligne puis passe a la ligne suivante
- */
-void free_grid(int **grid, int height)
-{
-	int i;
-
-	if (grid != NULL)
-	{
-		for (i = 0; i < height; i++)
-		{
-			free(grid[i]);
-		}
-		free(grid);
-	}
 }
