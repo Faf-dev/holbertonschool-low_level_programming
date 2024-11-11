@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/*
- * free_grid - libere la memoire d'une grille
- * @grid : la grille a liberer
- * @height : sers d'indicateur pour liberer chaque ligne
- */
 
+/**
+ * free_grid - free toute la grille
+ * @grid : la grille a free
+ * @height : sers d'indice pour chaque ligne a liberer
+ */
 void free_grid(int **grid, int height)
 {
 	int i;
