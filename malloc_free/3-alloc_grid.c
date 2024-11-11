@@ -10,19 +10,52 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int *grid;
-	int i;
+	int **grid;
+	int i = 0;
+	int j;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	grid = malloc((width * height) * 4);
+	grid = malloc(height * 8); /* alloc de 8octets(pointeur) par hauteur */
 
 	if (grid == NULL)
 		return (NULL);
-	for (i = 0; i < width * height; i++)
+	for (i = 0; i < height; i++)
 	{
-		grid[i] = 0;
+		grid[i] = malloc(width * 4);
+		if (grid[i] == NULL)
+		{ /* free toute la mem. pour l'echec de l'alloc d'une ligne */
+			while (i > 0)
+			{
+			free(grid[i]);
+			i--;
+			}
+			free(grid);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			grid[i][j] = 0; /* initialition a 0 de h et w */
+		}
 	}
-	return (grid);
+	return (grid); /* succes! */
+}
+/**
+ * free_grid - libere (normalement) toute la memoire
+ * @grid : la grille
+ * @height : free toute la ligne puis passe a la ligne suivante
+ */
+void free_grid(int **grid, int height)
+{
+	int i;
+
+	if (grid != NULL)
+	{
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
+	}
 }
