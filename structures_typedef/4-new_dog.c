@@ -24,7 +24,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	while (name[n_long])
 		n_long++;
-	my_dog->name = malloc(n_long * 4);
+	my_dog->name = malloc(n_long);
 	if (my_dog->name == NULL)
 		return (NULL);
 	for (i = 0; i < n_long; i++)
@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	my_dog->age = age;
 	while (owner[o_long])
 		o_long++;
-	my_dog->owner = malloc(o_long * 4);
+	my_dog->owner = malloc(o_long);
 	if (my_dog->owner == NULL)
 		return (NULL);
 	for (i = 0; i < o_long; i++)
