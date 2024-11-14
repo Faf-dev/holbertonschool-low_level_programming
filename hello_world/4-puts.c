@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Entry point oui oui bafguette
  * Return: return 0
  */
 int main(void)
