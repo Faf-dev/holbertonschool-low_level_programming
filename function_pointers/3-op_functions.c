@@ -49,5 +49,10 @@ return (a / b);
  */
 int op_mod(int a, int b)
 {
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 return (a % b);
 }
