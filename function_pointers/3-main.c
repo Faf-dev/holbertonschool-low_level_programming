@@ -21,7 +21,15 @@ exit(98);
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
 
+if (argv[2][0] != '\0' && argv[2][1] == '\0')
+{
 operator = get_op_func(argv[2]);
+}
+else
+{
+	printf("Error\n");
+	exit(99);
+}
 result = operator(num1, num2);
 printf("%d\n", result);
 return (0);
