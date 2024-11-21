@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * get_op_func - choisi la bonne fonction pour chaque operation
  * @s: argv[2] (l'operand)
