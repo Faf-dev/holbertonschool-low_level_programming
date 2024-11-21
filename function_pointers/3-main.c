@@ -6,6 +6,7 @@
  * main - main function
  * @argc: nombre d'arguments
  * @argv: tableau des arguments
+ * Return: always 0
  */
 
 int main(int argc, char **argv)
