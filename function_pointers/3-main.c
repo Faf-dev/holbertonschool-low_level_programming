@@ -23,10 +23,8 @@ num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
 
 if (argv[2][0] != '\0' && argv[2][1] == '\0')
-{
 operator = get_op_func(argv[2]);
-}
-else
+if (operator == NULL)
 {
 	printf("Error\n");
 	exit(99);
