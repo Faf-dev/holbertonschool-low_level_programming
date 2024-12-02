@@ -2,7 +2,7 @@
 
 /**
  * add_node_end - add a node at the end of list_t
- * @head: 
+ * @head: first node of list_t
  * @str: string (malloc'ed string)
  * Return:  the address of the new element, or NULL if it failed
  */
@@ -19,9 +19,11 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (newLastNode == NULL)
 	{
-		free (newLastNode);
+		free(newLastNode);
 		return (NULL);
 	}
+	newLastNode->str = strdup(str);
+	newLastNode->len = i;
 	if (*head == NULL)
 	*head = newLastNode;
 	else
@@ -31,9 +33,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		current = current->next;
 	current->next = newLastNode;
 	}
-
-	newLastNode->str = strdup(str);
-	newLastNode->len = i;
-	
 	return (newLastNode);
 }
