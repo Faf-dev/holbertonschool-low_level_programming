@@ -2,7 +2,7 @@
 
 /**
  * print_list - print all the elements of list_t
- * @h: elements of list_t
+ * @h: node of list_t
  * Return: length of the list_t
  */
 
