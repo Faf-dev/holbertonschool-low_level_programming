@@ -1,5 +1,6 @@
 #include "lists.h"
-
+#include "2-add_dnodeint.c"
+#include "3-add_dnodeint_end.c"
 /**
  * insert_dnodeint_at_index - create a node at a given position
  * @h: the first node
