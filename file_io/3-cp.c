@@ -13,15 +13,15 @@ void error_exit(int code, const char *message, const char *filename)
 }
 
 /**
- * cpy_filefrom_fileto - copy content of filefrom into fileto
+ * main - copy content of filefrom into fileto
  * @argc: number of argument
  * @argv: array of argument
  * Return: 1 if success, -1 if failed
  */
 
-int cpy_filefrom_fileto(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int fd_from, fd_to, i = 0;
+	int fd_from, fd_to;
 	char buffer[1024];
 	ssize_t bytes_write, bytes_read;
 
@@ -43,14 +43,15 @@ int cpy_filefrom_fileto(int argc, char **argv)
 		/* Lire jusqu'à 1024 octets du fichier from */
 		bytes_read = read(fd_from, buffer, 1024);
 		if (bytes_read == -1)
+		{
 			error_exit(98, "Error: Can't read from file %s\n", argv[1]);
-			/* Si des octets ont été lus, les ecrire dans le fichier "to" */
-			if (bytes_read > 0)
-			{
+		}
+		if (bytes_read > 0)
+		{
 			bytes_write = write(fd_to, buffer, bytes_read);
-			if (bytes_write == -1 || bytes_write != bytes_read)
-				error_exit(99, "Error: Can't write to %s\n", argv[2]);
-			}
+				if (bytes_write == -1 || bytes_write != bytes_read)
+					error_exit(99, "Error: Can't write to %s\n", argv[2]);
+		}
 		}	while (bytes_read > 0);
 
 	if (bytes_write == -1)
@@ -59,5 +60,5 @@ int cpy_filefrom_fileto(int argc, char **argv)
 		error_exit(100, "Error: Can't close fd %d\n", argv[1]);
 	if (close(fd_to) == -1)
 		error_exit(100, "Error: Can't close fd %d\n", argv[2]);
-	free(buffer);
+	return (1);
 }
