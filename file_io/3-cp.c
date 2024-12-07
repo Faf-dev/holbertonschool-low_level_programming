@@ -16,7 +16,7 @@ void error_exit(int code, const char *message, const char *filename)
  * main - copy content of filefrom into fileto
  * @argc: number of argument
  * @argv: array of argument
- * Return: 1 if success, -1 if failed
+ * Return: Always 0
  */
 
 int main(int argc, char **argv)
@@ -60,5 +60,5 @@ int main(int argc, char **argv)
 		error_exit(100, "Error: Can't close fd %d\n", argv[1]);
 	if (close(fd_to) == -1)
 		error_exit(100, "Error: Can't close fd %d\n", argv[2]);
-	return (1);
+	return (0);
 }
